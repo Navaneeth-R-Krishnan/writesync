@@ -2,17 +2,19 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { config } from "dotenv";
+config();
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCPnFT9xKlspjdCdslBiRvyBnkGKg3WnCs",
-  authDomain: "writesync-docs.firebaseapp.com",
-  projectId: "writesync-docs",
-  storageBucket: "writesync-docs.firebasestorage.app",
-  messagingSenderId: "844651539785",
-  appId: "1:844651539785:web:701a91f37515f6ba193e98"
+  apiKey: process.env.apiKey,
+  authDomain: process.env.authDomain,
+  projectId: process.env.projectId,
+  storageBucket: process.env.storageBucket,
+  messagingSenderId: process.env.messagingSenderId,
+  appId: process.env.appId
 };
 
 // Initialize Firebase
